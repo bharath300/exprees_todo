@@ -7,7 +7,7 @@ const putId= async (itemname)=>{
 };
 
 const getall=async ()=>{
-    const result= await knexInstance("items").select('*');
+    const result= await knexInstance("items").select('*').orderBy("id");
     console.log (result);
     return result;
 };
